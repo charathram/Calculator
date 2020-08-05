@@ -12,21 +12,52 @@ const Keys = (props) => {
         <Text style={styles.text}>%</Text>
         <Text style={styles.text}>DIV</Text>
       </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>7</Text>
+        <Text style={styles.text}>8</Text>
+        <Text style={styles.text}>9</Text>
+        <Text style={styles.text}>X</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>4</Text>
+        <Text style={styles.text}>5</Text>
+        <Text style={styles.text}>6</Text>
+        <Text style={styles.text}>-</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>1</Text>
+        <Text style={styles.text}>2</Text>
+        <Text style={styles.text}>3</Text>
+        <Text style={styles.text}>+</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={[styles.text, { flex: 5, marginRight: 11 }]}>0</Text>
+        <Text style={[styles.text, { flex: 2, marginLeft: 2 }]}>.</Text>
+        <Text style={[styles.text, { flex: 2 }]}>=</Text>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    justifyContent: "space-around",
+  },
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   text: {
     fontSize: 30,
     borderWidth: 1,
     borderColor: "gray",
     flex: 1,
+    textAlign: "center",
+    marginLeft: 5,
+    marginRight: 5,
+    padding: 5,
   },
 });
 
