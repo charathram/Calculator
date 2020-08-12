@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { withStyles } from "@ui-kitten/components";
 
 const Display = (props) => {
-  const { style, ...rest } = props;
+  const { eva, style, ...rest } = props;
 
   return (
     <View style={[style, styles.container]}>
-      <Text style={styles.textStyle}>0.</Text>
+      <Text style={[eva.style.textStyle, styles.textStyle]}>0.</Text>
     </View>
   );
 };
@@ -23,4 +24,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Display;
+export const ThemedDisplay = withStyles(Display, (theme) => ({
+  textStyle: {
+    color: theme["color-primary-500"],
+  },
+}));
