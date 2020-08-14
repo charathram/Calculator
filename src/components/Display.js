@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
 
 export const ThemedDisplay = withStyles(Display, (theme) => ({
   textStyle: {
-    color: theme["color-primary-500"],
+    color: theme["color-warning-500"],
   },
 }));
